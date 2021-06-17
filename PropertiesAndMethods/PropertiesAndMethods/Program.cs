@@ -7,7 +7,7 @@ namespace PropertiesAndMethods
         static void Main(string[] args)
         {
             Person p = new Person();
-            p.FirstName = "Abcd";
+            Console.WriteLine(p.FirstName);
             p.Print();
         }
     }

@@ -12,7 +12,7 @@ namespace PropertiesAndMethods
         
         public string FirstName
         {
-            get 
+            get
             {
                 /* executed when someone tries to read FirstName */
                 Console.WriteLine("Executing FirstName.get");
@@ -23,7 +23,7 @@ namespace PropertiesAndMethods
 
                 return firstName;
             }
-            set
+            private set
             {
                 /* executed when someone tries to write FirstName */
                 Console.WriteLine("Executing FirstName.set");
