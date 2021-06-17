@@ -6,8 +6,7 @@ namespace PropertiesAndMethods
     {
         static void Main(string[] args)
         {
-            Person p = new Person();
-            Console.WriteLine(p.FirstName);
+            Person p = new Person("FirstName", "LastName");
             p.Print();
         }
     }

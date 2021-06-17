@@ -8,38 +8,30 @@ namespace PropertiesAndMethods
 {
     public class Person
     {
-        private string firstName;
-        
+        public Person(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+
         public string FirstName
         {
-            get
-            {
-                /* executed when someone tries to read FirstName */
-                Console.WriteLine("Executing FirstName.get");
-                if (string.IsNullOrEmpty(firstName))
-                {
-                    firstName = "Test FirstName";
-                }
+            get;
+        }
 
-                return firstName;
-            }
-            private set
-            {
-                /* executed when someone tries to write FirstName */
-                Console.WriteLine("Executing FirstName.set");
+        public string LastName
+        {
+            get;
+        }
 
-                if (string.IsNullOrEmpty(value))
-                {
-                    value = string.Empty;
-                }
-
-                firstName = value;
-            }
+        public string FullName
+        {
+            get { return $"{FirstName} {LastName}"; }
         }
 
         public void Print()
         {
-            Console.WriteLine($"Hello, my name is {FirstName}");
+            Console.WriteLine($"Hello, my name is {FullName}");
         }
     }
 }
